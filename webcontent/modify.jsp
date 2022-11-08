@@ -13,7 +13,7 @@
     <meta name="author" content="">
     <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>registerPage</title>
+    <title>modify/deletePage</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
 
@@ -55,13 +55,13 @@
                 <span>Book</span>
               </h6>
               <li class="nav-item">
-                <a class="nav-link active">
+                <a class="nav-link" href="register.jsp">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                   Register
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="modify.jsp">
+                <a class="nav-link active" href="">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                   Modify/Remove
                 </a>
@@ -95,86 +95,21 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+<div class="jumbotron">
+  <h1 class="display-5">수정/삭제할 도서를 검색해주세요.</h1>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
          
-         <div class="col-md-8 order-md-1">
-	      <h4 class="mb-3">Register Book</h4>
-	      
-	      <form class="needs-validation" novalidate="">
-	        <div class="row">
-	          <div class="col-md-6 mb-3">
-	            <label for="bookname">Book Name</label>
-	            <input type="text" class="form-control" id="bookname" placeholder="" value="" required="">
-	            <div class="invalid-feedback">
-	              Valid first name is required.
-	            </div>
-	          </div>
-	        </div>
-	
-	        <div class="mb-3">
-	          <label for="authorname">Author Name</label>
-	          <input type="text" class="form-control" id="authorname" placeholder="" required="">
-	          <div class="invalid-feedback">
-	            Please enter the author name
-	          </div>
-	        </div>
-	
-	        <div class="mb-3">
-	          <label for="publisher">Publisher</label>
-	          <input type="text" class="form-control" id="publisher" placeholder="">
-	        </div>
-	        <div class="custom-control custom-checkbox">
-	          <input type="checkbox" class="custom-control-input" id="inService">
-	          <label class="custom-control-label" for="inService">this book is in serivce.</label>
-	        </div>
-	        <hr class="mb-4">
-	
-			<div class='col-md-3 col-xs-4'>
-			    <div class="form-group">
-			    	<label for="publicationdate">Publication</label>
-			        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-			            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" value="01/11/2020">
-			            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-			                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-			            </div>
-			        </div>
-			    </div>
-			</div>
-			<div class='col-md-3 col-xs-4'>
-			    <div class="form-group">
-			    	<label for="publicationdate">Registration</label>
-			        <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-			            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" value="01/15/2020">
-			            <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
-			                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-			            </div>
-			        </div>
-			    </div>
-			</div>
-			<br>
-			<hr class="mb-4">
-	        <h4 class="mb-3">Service</h4>
-	
-	        <div class="d-block my-3">
-	          <div class="custom-control custom-radio">
-	            <input id="rent" name="serviceType" type="radio" class="custom-control-input" checked="" required="">
-	            <label class="custom-control-label" for="rent">available to rent</label>
-	          </div>
-	          <div class="custom-control custom-radio">
-	            <input id="reference" name="serviceType" type="radio" class="custom-control-input" required="">
-	            <label class="custom-control-label" for="reference">Reference(only for read)</label>
-	          </div>
-	        </div>
-	        
-	        <hr class="mb-4">
-	        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-	      </form>
-    </div>
-
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-  </footer>
+  
          
          
         </main>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+  </footer>
       </div>
     </div>
 
@@ -190,23 +125,5 @@
     <script>
       feather.replace()
     </script>
-    
-    <!-- datepicker -->
-    <script type="text/javascript">
-    $(function () {
-        $('#datetimepicker1').datetimepicker({ format: 'L'});
-        $('#datetimepicker2').datetimepicker({
-            format: 'L',
-            useCurrent: false
-        });
-        $("#datetimepicker1").on("change.datetimepicker", function (e) {
-            $('#datetimepicker2').datetimepicker('minDate', e.date);
-        });
-        $("#datetimepicker2").on("change.datetimepicker", function (e) {
-            $('#datetimepicker1').datetimepicker('maxDate', e.date);
-        });
-    });
-</script>
-  
 
 </body></html>
